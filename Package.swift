@@ -25,5 +25,5 @@ let package = Package(
     targets: [
         Target(name: "SwiftySweetness")
     ],
-    exclude: ["Example"]
+    exclude: ["Example", "SwiftySweetness/UIKit"]
 )
