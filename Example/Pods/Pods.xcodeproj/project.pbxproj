@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3EEB783215CCA4A4433AC5B9C30382CE /* SwiftySweetness-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD2AA0F95CABD3EA4F5267E7EF2DDA5 /* SwiftySweetness-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E2C88000BC767E78A6A9612FC9B3A62 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D853C5063ECD66FBBE76323D2E5D084 /* ReplaceMe.swift */; };
 		6DBBF7B4A935FC2DDA8BD175D3A56DFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		726271F0967342CB733DF66B75496216 /* Pods-SwiftySweetness_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3306E67ABE8DF8BCEF064E7220F5A79D /* Pods-SwiftySweetness_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		806E60112EF308B7612154F3E6C0281A /* SwiftySweetness-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCFB9F97595E7EA8A0B6E8953E94F18 /* SwiftySweetness-dummy.m */; };
@@ -16,6 +15,21 @@
 		999FA244DD7A37F28113263BC494825C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		C5603F317886163074C7D8A8699E9FB3 /* Pods-SwiftySweetness_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D57A7F60680DB6CDB1C2DBAD821062 /* Pods-SwiftySweetness_Example-dummy.m */; };
 		D38F96BCEC0D276C9E587E6C06BA8B9D /* Pods-SwiftySweetness_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 297960E07440548BFFAA4E498F4E17CA /* Pods-SwiftySweetness_Tests-dummy.m */; };
+		E361848A1F7F308D005D93A1 /* Array+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184851F7F2FB3005D93A1 /* Array+SwiftySweetness.swift */; };
+		E361848B1F7F30B1005D93A1 /* Bool+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184871F7F2FB3005D93A1 /* Bool+SwiftySweetness.swift */; };
+		E361848C1F7F30D6005D93A1 /* CGRect+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184841F7F2FB3005D93A1 /* CGRect+SwiftySweetness.swift */; };
+		E361848D1F7F318C005D93A1 /* Double+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184881F7F2FB3005D93A1 /* Double+SwiftySweetness.swift */; };
+		E361848E1F7F318E005D93A1 /* Int+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184861F7F2FB3005D93A1 /* Int+SwiftySweetness.swift */; };
+		E361848F1F7F3191005D93A1 /* Optional+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184891F7F2FB3005D93A1 /* Optional+SwiftySweetness.swift */; };
+		E36184901F7F3198005D93A1 /* String+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184831F7F2FB3005D93A1 /* String+SwiftySweetness.swift */; };
+		E361849A1F7F3D59005D93A1 /* UIButtom+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184961F7F3D53005D93A1 /* UIButtom+SwiftySweetness.swift */; };
+		E361849B1F7F3D5B005D93A1 /* UIColor+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184971F7F3D53005D93A1 /* UIColor+SwiftySweetness.swift */; };
+		E361849C1F7F4111005D93A1 /* UIView+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184951F7F3D53005D93A1 /* UIView+SwiftySweetness.swift */; };
+		E361849D1F7F417D005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184981F7F3D53005D93A1 /* UIViewController+SwiftySweetness.swift */; };
+		E361849E1F7F4185005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184991F7F3D53005D93A1 /* UIWindow+SwiftySweetness.swift */; };
+		E36184A51F7F4D95005D93A1 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184911F7F3226005D93A1 /* Operators.swift */; };
+		E36184A61F7F4D9F005D93A1 /* Decodable+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184A21F7F4B0D005D93A1 /* Decodable+SwiftySweetness.swift */; };
+		E36184A71F7F4DA2005D93A1 /* Encodable+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36184A01F7F495F005D93A1 /* Encodable+SwiftySweetness.swift */; };
 		EF544C7791FCB2E747B314F0B07DBEA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +54,6 @@
 		30DD57D158E5FD3C4BDD904810B03D85 /* SwiftySweetness.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftySweetness.modulemap; sourceTree = "<group>"; };
 		3306E67ABE8DF8BCEF064E7220F5A79D /* Pods-SwiftySweetness_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftySweetness_Tests-umbrella.h"; sourceTree = "<group>"; };
 		367DD39FB54220647E4E24FFD75DFDC7 /* Pods-SwiftySweetness_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftySweetness_Example.modulemap"; sourceTree = "<group>"; };
-		3D853C5063ECD66FBBE76323D2E5D084 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SwiftySweetness/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		481FB18FDCB7BAC1B50089DA99CF1F07 /* Pods-SwiftySweetness_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftySweetness_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4BD2AA0F95CABD3EA4F5267E7EF2DDA5 /* SwiftySweetness-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySweetness-umbrella.h"; sourceTree = "<group>"; };
 		577D64731148B23F923A638CF72E031F /* Pods-SwiftySweetness_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftySweetness_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -61,6 +74,21 @@
 		DBCFB9F97595E7EA8A0B6E8953E94F18 /* SwiftySweetness-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySweetness-dummy.m"; sourceTree = "<group>"; };
 		DDECF9FC6DBAEB881928F7F9667E5AD4 /* Pods-SwiftySweetness_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftySweetness_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E31BC736B951878E64251168775E0114 /* Pods-SwiftySweetness_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftySweetness_Tests.modulemap"; sourceTree = "<group>"; };
+		E36184831F7F2FB3005D93A1 /* String+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184841F7F2FB3005D93A1 /* CGRect+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184851F7F2FB3005D93A1 /* Array+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184861F7F2FB3005D93A1 /* Int+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184871F7F2FB3005D93A1 /* Bool+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184881F7F2FB3005D93A1 /* Double+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184891F7F2FB3005D93A1 /* Optional+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184911F7F3226005D93A1 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		E36184951F7F3D53005D93A1 /* UIView+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184961F7F3D53005D93A1 /* UIButtom+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtom+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184971F7F3D53005D93A1 /* UIColor+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184981F7F3D53005D93A1 /* UIViewController+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184991F7F3D53005D93A1 /* UIWindow+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184A01F7F495F005D93A1 /* Encodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
+		E36184A21F7F4B0D005D93A1 /* Decodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		F8D57A7F60680DB6CDB1C2DBAD821062 /* Pods-SwiftySweetness_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftySweetness_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +170,7 @@
 		8C2387FF0DFC097CD97F9B7E13E726DB /* SwiftySweetness */ = {
 			isa = PBXGroup;
 			children = (
-				3D853C5063ECD66FBBE76323D2E5D084 /* ReplaceMe.swift */,
+				E36184E31F7F5384005D93A1 /* SwiftySweetness */,
 				CF7D5B6F49AC32902E02BEEDF7EC3D67 /* Support Files */,
 			);
 			name = SwiftySweetness;
@@ -186,6 +214,52 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E36184771F7F2E65005D93A1 /* StandardTypes */ = {
+			isa = PBXGroup;
+			children = (
+				E36184851F7F2FB3005D93A1 /* Array+SwiftySweetness.swift */,
+				E36184871F7F2FB3005D93A1 /* Bool+SwiftySweetness.swift */,
+				E36184841F7F2FB3005D93A1 /* CGRect+SwiftySweetness.swift */,
+				E36184881F7F2FB3005D93A1 /* Double+SwiftySweetness.swift */,
+				E36184861F7F2FB3005D93A1 /* Int+SwiftySweetness.swift */,
+				E36184891F7F2FB3005D93A1 /* Optional+SwiftySweetness.swift */,
+				E36184831F7F2FB3005D93A1 /* String+SwiftySweetness.swift */,
+				E36184911F7F3226005D93A1 /* Operators.swift */,
+			);
+			path = StandardTypes;
+			sourceTree = "<group>";
+		};
+		E36184941F7F3D41005D93A1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E36184961F7F3D53005D93A1 /* UIButtom+SwiftySweetness.swift */,
+				E36184971F7F3D53005D93A1 /* UIColor+SwiftySweetness.swift */,
+				E36184951F7F3D53005D93A1 /* UIView+SwiftySweetness.swift */,
+				E36184981F7F3D53005D93A1 /* UIViewController+SwiftySweetness.swift */,
+				E36184991F7F3D53005D93A1 /* UIWindow+SwiftySweetness.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E361849F1F7F4950005D93A1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E36184A01F7F495F005D93A1 /* Encodable+SwiftySweetness.swift */,
+				E36184A21F7F4B0D005D93A1 /* Decodable+SwiftySweetness.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E36184E31F7F5384005D93A1 /* SwiftySweetness */ = {
+			isa = PBXGroup;
+			children = (
+				E36184941F7F3D41005D93A1 /* UIKit */,
+				E36184771F7F2E65005D93A1 /* StandardTypes */,
+				E361849F1F7F4950005D93A1 /* Protocols */,
+			);
+			path = SwiftySweetness;
 			sourceTree = "<group>";
 		};
 		F6E3E517C20F59D3F56FD2C5CAA6F94D /* Pods-SwiftySweetness_Tests */ = {
@@ -329,8 +403,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2C88000BC767E78A6A9612FC9B3A62 /* ReplaceMe.swift in Sources */,
+				E361848A1F7F308D005D93A1 /* Array+SwiftySweetness.swift in Sources */,
+				E361849B1F7F3D5B005D93A1 /* UIColor+SwiftySweetness.swift in Sources */,
 				806E60112EF308B7612154F3E6C0281A /* SwiftySweetness-dummy.m in Sources */,
+				E361849D1F7F417D005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */,
+				E36184A61F7F4D9F005D93A1 /* Decodable+SwiftySweetness.swift in Sources */,
+				E361848F1F7F3191005D93A1 /* Optional+SwiftySweetness.swift in Sources */,
+				E361849A1F7F3D59005D93A1 /* UIButtom+SwiftySweetness.swift in Sources */,
+				E361848E1F7F318E005D93A1 /* Int+SwiftySweetness.swift in Sources */,
+				E361849C1F7F4111005D93A1 /* UIView+SwiftySweetness.swift in Sources */,
+				E36184A71F7F4DA2005D93A1 /* Encodable+SwiftySweetness.swift in Sources */,
+				E361848D1F7F318C005D93A1 /* Double+SwiftySweetness.swift in Sources */,
+				E36184A51F7F4D95005D93A1 /* Operators.swift in Sources */,
+				E361849E1F7F4185005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
+				E36184901F7F3198005D93A1 /* String+SwiftySweetness.swift in Sources */,
+				E361848C1F7F30D6005D93A1 /* CGRect+SwiftySweetness.swift in Sources */,
+				E361848B1F7F30B1005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CDF4A823AE7B6CC5193A3774C060476 /* Pods-SwiftySweetness_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -495,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDECF9FC6DBAEB881928F7F9667E5AD4 /* Pods-SwiftySweetness_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
