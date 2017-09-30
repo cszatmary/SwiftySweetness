@@ -1,9 +1,10 @@
 # SwiftySweetness
 
-[![CI Status](http://img.shields.io/travis/cszatma/SwiftySweetness.svg?style=flat)](https://travis-ci.org/cszatma/SwiftySweetness)
+[![Language Swift](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
 [![Version](https://img.shields.io/cocoapods/v/SwiftySweetness.svg?style=flat)](http://cocoapods.org/pods/SwiftySweetness)
 [![License](https://img.shields.io/cocoapods/l/SwiftySweetness.svg?style=flat)](http://cocoapods.org/pods/SwiftySweetness)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftySweetness.svg?style=flat)](http://cocoapods.org/pods/SwiftySweetness)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 **SwiftySweetness** is a list of extensions that provde extra functionality and syntactic sugar.
 
@@ -118,6 +119,23 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SwiftySweetness'
 ```
+
+### Swift Package Manager
+
+SwiftySweetness is available through the [Swift Package Manager](https://swift.org/package-manager/)
+To install it, add the following to your `Package.swift`.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "MyProject",
+    dependencies: [
+        .package(url: "https://github.com/cszatma/SwiftySweetness.git", from: "1.1.0")
+    ]
+)
+```
+**NOTE:** The Swift Package Manager currently does not support UIKit. Therefore the UIKit extensions will not be present if this method is used.
 
 ## Contributing
 Open an issue or submit a pull request.
