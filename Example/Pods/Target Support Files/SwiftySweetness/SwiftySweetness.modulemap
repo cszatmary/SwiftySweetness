@@ -1,0 +1,6 @@
+framework module SwiftySweetness {
+  umbrella header "SwiftySweetness-umbrella.h"
+
+  export *
+  module * { export * }
+}
