@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.author           = { 'Christopher Szatmary' => 'cs@christopherszatmary.com' }
   s.source           = { :git => 'https://github.com/cszatma/SwiftySweetness.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-  s.source_files = 'SwiftySweetness/Classes/**/*.{swift}'
+  s.source_files = 'SwiftySweetness/**/*.{swift}'
   s.frameworks = 'UIKit'
 end
