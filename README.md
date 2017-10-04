@@ -108,7 +108,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 ### Requirements
-* iOS 9.0+
+* iOS 8.0+
+* macOS 10.9+
+* tvOS 9.0+
+* watchOS  2.0+
+* Linux
 * Swift 4
 
 ### CocoaPods
