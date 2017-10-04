@@ -18,9 +18,15 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-import UIKit
+#if os(OSX)
+    import AppKit
+    public typealias Color = NSColor
+#else
+    import UIKit
+    public typealias Color = UIColor
+#endif
 
-public extension UIColor {
+public extension Color {
     
     /**
      Initializes and returns a color object using the specified opacity and RGB component values.

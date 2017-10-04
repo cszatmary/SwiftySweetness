@@ -18,16 +18,33 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-import UIKit
+#if os(OSX)
+    import AppKit
+    public typealias View = NSView
+#elseif os(iOS) || os(tvOS)
+    import UIKit
+    public typealias View = UIView
+#endif
 
-public extension UIView {
+#if os(OSX) || os(iOS) || os(tvOS)
+public extension View {
     
     // - MARK: Properties
     
     /// The cornerRadius of the view.
     @IBInspectable public var cornerRadius: CGFloat {
-        get { return self.layer.cornerRadius }
+        get {
+            #if os(OSX)
+                guard let layer = layer else { return -1 }
+            #endif
+            
+            return layer.cornerRadius
+        }
         set {
+            #if os(OSX)
+                guard let layer = layer else { return }
+            #endif
+            
             layer.cornerRadius = newValue
             layer.masksToBounds = true
         }
@@ -48,8 +65,13 @@ public extension UIView {
     // - MARK: Methods
     
     /// Sets the width and color of the layer's border.
-    public func setBorder(width: CGFloat, color: UIColor) {
+    public func setBorder(width: CGFloat, color: Color) {
+        #if os(OSX)
+            guard let layer = layer else { return }
+        #endif
+        
         layer.borderWidth = width
         layer.borderColor = color.cgColor
     }
 }
+#endif

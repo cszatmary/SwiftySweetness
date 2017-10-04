@@ -18,17 +18,19 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-import UIKit
+#if os(iOS) || os(tvOS)
+    import UIKit
 
-public extension UIWindow {
-    
-    /// Initializes and returns a newly allocated view object with the specified frame rectangle and view controller.
-    /// - parameter frame: The frame rectangle for the view, measured in points.
-    /// - parameter rootViewController: The root view controller for the window.
-    public convenience init(frame: CGRect = UIScreen.main.bounds, rootViewController: UIViewController) {
-        self.init(frame: frame)
-        self.rootViewController = rootViewController
-        makeKeyAndVisible()
+    public extension UIWindow {
+        
+        /// Initializes and returns a newly allocated view object with the specified frame rectangle and view controller.
+        /// - parameter frame: The frame rectangle for the view, measured in points.
+        /// - parameter rootViewController: The root view controller for the window.
+        public convenience init(frame: CGRect = UIScreen.main.bounds, rootViewController: UIViewController) {
+            self.init(frame: frame)
+            self.rootViewController = rootViewController
+            makeKeyAndVisible()
+        }
+        
     }
-    
-}
+#endif

@@ -18,33 +18,37 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-import UIKit
-
-public extension UIViewController {
+#if os(iOS) || os(tvOS)
+    import UIKit
     
-    /// Used to dismiss the keyboard when the user taps the screen.
-    public func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+    public extension UIButton {
+        
+        /// The borderWidth of the UIButton.
+        @IBInspectable public var borderWidth: CGFloat {
+            get {
+                return layer.borderWidth
+            }
+            
+            set {
+                layer.borderWidth = newValue
+            }
+        }
+        
+        /// The borderColor of the UIButton.
+        @IBInspectable public var borderColor: CGColor? {
+            get {
+                return layer.borderColor
+            }
+            
+            set {
+                layer.borderColor = newValue
+            }
+        }
+        
+        /// The current text that is displayed by the button.
+        public var text: String {
+            get { return self.titleLabel?.text ?? "" }
+            set { titleLabel?.text = newValue }
+        }
     }
-    
-    /// Automatically dismisses an active keyboard.
-    @objc public func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    /**
-     Displays a UIAlertController with given title, message and actions.
-     
-     - parameters:
-     - title: The title of the Alert.
-     - message: The message to be displayed to the user.
-     - buttonTitle: The title of the button displayed.
-     */
-    public func displayAlertController(title: String, message: String, actions: [UIAlertAction], completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        actions.forEach({ alert.addAction($0) })
-        self.present(alert, animated: true, completion: completion)
-    }
-    
-}
+#endif
