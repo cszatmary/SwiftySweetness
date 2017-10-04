@@ -21,9 +21,6 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftSweetness",
-    targets: [
-        Target(name: "SwiftySweetness")
-    ],
-    exclude: ["Example", "SwiftySweetness/UIKit"]
+    name: "SwiftySweetness",
+    exclude: ["Sources/GUITypes"]
 )
