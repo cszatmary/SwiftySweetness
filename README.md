@@ -103,7 +103,7 @@ viewController.displayAlertController(title: "Important", message: "This is an a
 ```
 ### And much more!
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Use it in a project to see what's available.
 
 ## Installation
 
