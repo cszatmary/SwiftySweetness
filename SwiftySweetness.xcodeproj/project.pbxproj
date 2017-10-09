@@ -13,6 +13,10 @@
 		8933C7901EB5B82D000D00A4 /* SwiftySweetnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* SwiftySweetnessTests.swift */; };
 		DD7502881C68FEDE006590AF /* SwiftySweetness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* SwiftySweetness.framework */; };
 		DD7502921C690C7A006590AF /* SwiftySweetness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* SwiftySweetness.framework */; };
+		E305E2A71F8B11AA00360094 /* DataRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305E2A61F8B11AA00360094 /* DataRepresentation.swift */; };
+		E305E2A81F8B11AA00360094 /* DataRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305E2A61F8B11AA00360094 /* DataRepresentation.swift */; };
+		E305E2A91F8B11AA00360094 /* DataRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305E2A61F8B11AA00360094 /* DataRepresentation.swift */; };
+		E305E2AA1F8B11AA00360094 /* DataRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305E2A61F8B11AA00360094 /* DataRepresentation.swift */; };
 		E36185491F8315F6005D93A1 /* Decodable+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */; };
 		E361854A1F8315F6005D93A1 /* Decodable+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */; };
 		E361854B1F8315F7005D93A1 /* Decodable+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */; };
@@ -110,6 +114,7 @@
 		AD2FAA281CD0B6E100659CF4 /* SwiftySweetnessTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftySweetnessTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* SwiftySweetness-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftySweetness-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* SwiftySweetness-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftySweetness-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E305E2A61F8B11AA00360094 /* DataRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentation.swift; sourceTree = "<group>"; };
 		E36185471F8315E3005D93A1 /* Encodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SwiftySweetness.swift"; sourceTree = "<group>"; };
@@ -227,6 +232,7 @@
 				E36185441F8315A6005D93A1 /* GUITypes */,
 				E36185451F8315B8005D93A1 /* StandardTypes */,
 				E36185461F8315C5005D93A1 /* Protocols */,
+				E305E2A51F8B113900360094 /* Enums */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -254,6 +260,14 @@
 				AD2FAA281CD0B6E100659CF4 /* SwiftySweetnessTests.plist */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		E305E2A51F8B113900360094 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E305E2A61F8B11AA00360094 /* DataRepresentation.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		E36185441F8315A6005D93A1 /* GUITypes */ = {
@@ -286,8 +300,8 @@
 		E36185461F8315C5005D93A1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */,
 				E36185471F8315E3005D93A1 /* Encodable+SwiftySweetness.swift */,
+				E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -583,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E305E2A71F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E36185631F8316FD005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
 				E36185861F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E36185661F8316FD005D93A1 /* Int+SwiftySweetness.swift in Sources */,
@@ -613,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E305E2A91F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E36185731F8316FE005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
 				E36185901F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E36185761F8316FE005D93A1 /* Int+SwiftySweetness.swift in Sources */,
@@ -635,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E305E2AA1F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E361857B1F8316FE005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
 				E36185951F831708005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E361857E1F8316FE005D93A1 /* Int+SwiftySweetness.swift in Sources */,
@@ -657,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E305E2A81F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E361856B1F8316FD005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
 				E361858B1F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E361856E1F8316FD005D93A1 /* Int+SwiftySweetness.swift in Sources */,
