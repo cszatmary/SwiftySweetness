@@ -41,6 +41,19 @@ public extension Array {
     public static func -= (lhs: inout Array, rhs: Int) -> Element {
         return lhs.remove(at: rhs)
     }
+    
+    /**
+     Replaces the element at a given index and returns the previous element.
+     - parameters:
+         - newElement: The element that will replace the exisiting element.
+         - index: The index at which to replace the element.
+     - returns: The element previously at the given index.
+     */
+    public mutating func replace(newElement: Element, at index: Index) -> Element {
+        let removed = self[index]
+        self[index] = newElement
+        return removed
+    }
 }
 
 public extension Array where Element: Comparable {
