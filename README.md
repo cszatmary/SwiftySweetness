@@ -60,8 +60,8 @@ let decodedStruct = JSONDecoder().decode(MyStruct.self, from: json)
 ```
 But `SwiftySweetness` makes this even easier:
 ```swift
-let json = myStruct.encodeToJSON()
-let decodedStruct = MyStruct.decodeFrom(json: json)
+let json = myStruct.encode(to: .json)
+let decodedStruct = MyStruct.decode(from: json, ofType: .json)
 ```
 
 ### UIColor
@@ -70,7 +70,7 @@ Construct a `UIColor` with rgb values from 0 to 255:
 let color = UIColor(r: 5 g: 185, b: 255)
 ```
 
-Construct a UIColor from a hex number:
+Construct a `UIColor `from a hex number:
 ```swift
 let color = UIColor(hex: 0x02B8FF)
 ```
@@ -121,7 +121,7 @@ SwiftySweetness is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SwiftySweetness'
+pod 'SwiftySweetness', '~> 1.3'
 ```
 
 ### Swift Package Manager
@@ -135,7 +135,7 @@ import PackageDescription
 let package = Package(
     name: "MyProject",
     dependencies: [
-        .package(url: "https://github.com/cszatma/SwiftySweetness.git", from: "1.1.0")
+        .package(url: "https://github.com/cszatma/SwiftySweetness.git", from: "1.3.0")
     ]
 )
 ```
