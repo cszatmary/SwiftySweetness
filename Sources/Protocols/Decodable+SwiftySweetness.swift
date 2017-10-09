@@ -22,11 +22,17 @@ import Foundation
 
 public extension Decodable {
     
-    /// Decodes a JSON object and returns a value of the specified type.
-    /// - parameter json: The JSON object to decode.
-    /// - throws: An error if the JSON cannot be decoded.
-    /// - returns: A value of the specified type decoded from the JSON object.
-    public static func decodeFrom(json: Data) throws -> Self {
-        return try JSONDecoder().decode(Self.self, from: json)
+    /// Decodes Data and returns it as a specified type.
+    /// - parameter data: The Data to be decoded.
+    /// - parameter type: The format in which the data is represented.
+    /// - throws: An error if the data cannot be decoded.
+    /// - returns: A value of the specified type decoded from the data.
+    public static func decode(from data: Data, ofType type: DataRepresentation) throws -> Self {
+        switch type {
+        case .json:
+            return try JSONDecoder().decode(Self.self, from: data)
+        case .plist:
+            return try PropertyListDecoder().decode(Self.self, from: data)
+        }
     }
 }
