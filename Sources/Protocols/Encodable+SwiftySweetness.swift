@@ -22,10 +22,16 @@ import Foundation
 
 public extension Encodable {
     
-    /// Creates a JSON-encoded representation of the value.
-    /// - throws: An error if the type cannot be encoded as JSON.
-    /// - returns: The type encoded as a JSON.
-    public func encodeToJSON() throws -> Data {
-        return try JSONEncoder().encode(self)
+    /// Encodes the instance in the given format.
+    /// - parameter type: The format in which the data should be encoded.
+    /// - throws: An error if the type cannot be encoded in the given format.
+    /// - returns: The instance encoded in the given format.
+    public func encode(to type: DataRepresentation) throws -> Data {
+        switch type {
+        case .json:
+            return try JSONEncoder().encode(self)
+        case .plist:
+            return try PropertyListEncoder().encode(self)
+        }
     }
 }
