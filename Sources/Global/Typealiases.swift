@@ -20,9 +20,13 @@
 
 import Foundation
 
-precedencegroup Exponentiative {
-    associativity: left
-    higherThan: MultiplicationPrecedence
-}
-infix operator **: Exponentiative
-infix operator **=: AssignmentPrecedence
+/// Represents any function with one parameter.
+public typealias UnaryFunction<A, X> = (A) -> X
+
+/// Represents any function with two parameters.
+public typealias BinaryFunction<A, B, X> = (A, B) -> X
+
+/// Represents any function with three parameters.
+public typealias TernaryFunction<A, B, C, X> = (A, B, C) -> X
+
+public typealias Property = (label: String, value: Any)
