@@ -27,6 +27,7 @@ precedencegroup Exponentiative {
 
 precedencegroup PipePrecedence {
     associativity: left
+    higherThan: AssignmentPrecedence
 }
 
 infix operator **: Exponentiative
