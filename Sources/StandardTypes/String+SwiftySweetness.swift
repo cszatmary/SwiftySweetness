@@ -70,4 +70,15 @@ public extension String {
         
         return String(repeating: character, count: padCount) + self
     }
+    
+    /// Splits a camel cased string. For example, the string "thisIsCamelCased" would return "this Is Camel Cased".
+    public func splitCamelCase() -> String {
+        return unicodeScalars.flatMap({ CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }).joined()
+    }
+    
+    /// Returns the first letter of each word in the string. For example, the string "Hello World" would return "HW".
+    public func initials() -> String {
+        guard !self.isEmpty else { return "" }
+        return components(separatedBy: " ").map({ String($0.first!) }).filter({ CharacterSet.letters.contains($0.unicodeScalars.first!) }).joined(separator: "")
+    }
 }
