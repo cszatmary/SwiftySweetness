@@ -26,30 +26,17 @@ public extension Int {
     
     /// Returns true if the Int is palindromic.
     public var isPalindromic: Bool {
-        let reversed = self.reverseNumber()
-        guard self == reversed else {
-            return false
-        }
-        return true
+        return self == reverseNumber()
     }
     
     /// A Bool indicating whether or not an Int is negative.
     public var isNegative: Bool {
-        guard self < 0 else {
-            return false
-        }
-        return true
+        return self < 0
     }
     
     /// The number of digits in the Int.
     public var numberOfDigits: Int {
-        var num = self
-        var numOfDigits = Int()
-        while num != 0 {
-            numOfDigits += 1
-            num /= 10
-        }
-        return numOfDigits
+        return (Double(self) |> log10 |> floor |> Int.init(_:)) + 1
     }
     
     /// A returns a Bool indicating whether or not the Int is a prime number.
@@ -90,7 +77,7 @@ public extension Int {
     
     /// Returns the digit at the specified index. Integers are zero indexed with the first digit being the least significant digit and the last digit being the most significant digit.
     /// - parameter index: The index of the digit.
-    /// - returns: The digit at the speified index.
+    /// - returns: The digit at the specified index.
     public func digit(at index: Int) -> Int? {
         var num = self
         
