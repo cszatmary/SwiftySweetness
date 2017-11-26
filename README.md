@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftySweetness.svg?style=flat)](http://cocoapods.org/pods/SwiftySweetness)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
-**SwiftySweetness** is a list of extensions that provde extra functionality and syntactic sugar.
+**SwiftySweetness** is a list of extensions that provides extra functionality and syntactic sugar.
 
 ## Examples
 
@@ -79,7 +79,7 @@ let decodedStruct = MyStruct.decode(from: json, ofType: .json)
 ### UIColor
 Construct a `UIColor` with rgb values from 0 to 255:
 ```swift
-let color = UIColor(r: 5 g: 185, b: 255)
+let color = UIColor(r: 5, g: 185, b: 255)
 ```
 
 Construct a `UIColor `from a hex number:
@@ -179,7 +179,7 @@ SwiftySweetness is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SwiftySweetness', '~> 1.3'
+pod 'SwiftySweetness', '~> 1.4'
 ```
 
 ### Swift Package Manager
@@ -193,7 +193,7 @@ import PackageDescription
 let package = Package(
     name: "MyProject",
     dependencies: [
-        .package(url: "https://github.com/cszatma/SwiftySweetness.git", from: "1.3.0")
+        .package(url: "https://github.com/cszatma/SwiftySweetness.git", from: "1.4.0")
     ]
 )
 ```
