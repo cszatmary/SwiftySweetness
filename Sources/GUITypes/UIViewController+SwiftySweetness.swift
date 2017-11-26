@@ -24,8 +24,9 @@
     public extension UIViewController {
         
         /// Used to dismiss the keyboard when the user taps the screen.
-        public func hideKeyboardWhenTappedAround() {
-            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        public func hideKeyboardWhenTappedAround(cancelsTouches: Bool = true) {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tap.cancelsTouchesInView = cancelsTouches
             view.addGestureRecognizer(tap)
         }
         
