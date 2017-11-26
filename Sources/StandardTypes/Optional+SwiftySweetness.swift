@@ -26,6 +26,6 @@ public extension Optional {
     
     /// Returns a boolean value stating whether or not the given optional has a value other than nil.
     public var hasValue: Bool {
-        return !(self == nil)
+        return self != nil
     }
 }

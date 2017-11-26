@@ -26,10 +26,7 @@ public extension Double {
     
     /// Returns a Bool indicating whether or not the Double is negative.
     public var isNegative: Bool {
-        guard self < 0 else {
-            return false
-        }
-        return true
+        return self < 0
     }
     
     // - MARK: Methods

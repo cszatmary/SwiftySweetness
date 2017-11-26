@@ -65,7 +65,7 @@ public extension String {
      - returns: The string with the applied padding.
     */
     public func pad(with character: Character, toLength length: Int) -> String {
-        let padCount = length - self.characters.count
+        let padCount = length - count
         guard padCount > 0 else { return self }
         
         return String(repeating: character, count: padCount) + self

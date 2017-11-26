@@ -65,17 +65,17 @@ public extension Array where Element: Comparable {
      - returns: The index of the element if it was found, nil otherwise.
      */
     public func binarySearch(for searchItem: Element) -> Int? {
-        var lowerIndex = 0;
+        var lowerIndex = 0
         var upperIndex = count - 1
         
-        while (true) {
+        while true {
             let currentIndex = (lowerIndex + upperIndex)/2
-            if(self[currentIndex] == searchItem) {
+            if self[currentIndex] == searchItem {
                 return currentIndex
-            } else if (lowerIndex > upperIndex) {
+            } else if lowerIndex > upperIndex {
                 return nil
             } else {
-                if (self[currentIndex] > searchItem) {
+                if self[currentIndex] > searchItem {
                     upperIndex = currentIndex - 1
                 } else {
                     lowerIndex = currentIndex + 1
