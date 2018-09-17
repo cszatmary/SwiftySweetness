@@ -76,44 +76,6 @@ let json = myStruct.encode(to: .json)
 let decodedStruct = MyStruct.decode(from: json, ofType: .json)
 ```
 
-### UIColor
-Construct a `UIColor` with rgb values from 0 to 255:
-```swift
-let color = UIColor(r: 5, g: 185, b: 255)
-```
-
-Construct a `UIColor `from a hex number:
-```swift
-let color = UIColor(hex: 0x02B8FF)
-```
-Or a hex string:
-```swift
-let color = UIColor(hex: "02B8FF")
-```
-
-### UIWindow
-Easily create and show a new `UIWindow` with a given `UIViewController`:
-```swift
-let window = UIWindow(rootViewController: ViewController()) // UIScreen.main.bounds is the default frame
-```
-or
-```swift
-let window = UIWindow(frame: myRect, rootViewController: ViewController())
-```
-
-### UIViewController
-Easily dismiss the keyboard when the user taps the screen:
-```swift
-viewController.hideKeyboardWhenTappedAround()
-```
-
-Easily display a `UIAlertController` insude your `UIViewController`:
-```swift
-var actions = [UIAlertActions]()
-...
-viewController.displayAlertController(title: "Important", message: "This is an alert!", actions: actions) // A completion closure can be added if necessary
-```
-
 ### PropertyRepresentable
 The `PropertyRepresentable` allows any conforming type to generate an array containing all its properties.
 ```swift
@@ -197,7 +159,6 @@ let package = Package(
     ]
 )
 ```
-**NOTE:** The Swift Package Manager currently does not support UIKit. Therefore the UIKit extensions will not be present if this method is used.
 
 ## Contributing
 Open an issue or submit a pull request.
