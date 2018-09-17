@@ -8,6 +8,10 @@
 
 **SwiftySweetness** is a list of extensions that provides extra functionality and syntactic sugar.
 
+## Version 2 Changes
+As of version 2.0.0 all UIKit and AppKit extensions have been removed. They have been moved to [HotCocoa](https://github.com/cszatma/HotCocoa).
+This was done as this framework is meant to be a pure swift framework that should work cross platform without need for the Objective-C runtime.
+
 ## Examples
 
 ### Int & Double
