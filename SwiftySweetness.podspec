@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftySweetness'
-  s.version          = '1.4.2'
+  s.version          = '2.0.0'
   s.summary          = 'Basic extensions to make Swift a little sweeter.'
   s.description      = <<-DESC
       SwiftySweetness adds extensions to Swift to improve functionality and make tasks simpler.
