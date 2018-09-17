@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				E3DF444A1FB007E9009039DA /* Global */,
-				E36185451F8315B8005D93A1 /* StandardTypes */,
+				E36185451F8315B8005D93A1 /* Extensions */,
 				E36185461F8315C5005D93A1 /* Protocols */,
 				E305E2A51F8B113900360094 /* Enums */,
 			);
@@ -259,7 +259,7 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		E36185451F8315B8005D93A1 /* StandardTypes */ = {
+		E36185451F8315B8005D93A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				E36185571F831637005D93A1 /* Array+SwiftySweetness.swift */,
@@ -271,7 +271,7 @@
 				E36185581F831637005D93A1 /* String+SwiftySweetness.swift */,
 				E3DF444F1FB019E8009039DA /* Any+SwiftySweetness.swift */,
 			);
-			path = StandardTypes;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E36185461F8315C5005D93A1 /* Protocols */ = {
