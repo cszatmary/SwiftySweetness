@@ -73,7 +73,7 @@ public extension String {
     
     /// Splits a camel cased string. For example, the string "thisIsCamelCased" would return "this Is Camel Cased".
     public func splitCamelCase() -> String {
-        return unicodeScalars.flatMap({ CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }).joined()
+        return unicodeScalars.compactMap({ CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }).joined()
     }
     
     /// Returns the first letter of each word in the string. For example, the string "Hello World" would return "HW".
