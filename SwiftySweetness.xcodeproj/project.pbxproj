@@ -63,26 +63,6 @@
 		E361857F1F8316FE005D93A1 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361855D1F831638005D93A1 /* Operators.swift */; };
 		E36185801F8316FE005D93A1 /* Optional+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185591F831637005D93A1 /* Optional+SwiftySweetness.swift */; };
 		E36185811F8316FE005D93A1 /* String+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185581F831637005D93A1 /* String+SwiftySweetness.swift */; };
-		E36185821F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */; };
-		E36185831F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */; };
-		E36185841F831707005D93A1 /* View+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */; };
-		E36185851F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */; };
-		E36185861F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */; };
-		E36185871F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */; };
-		E36185881F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */; };
-		E36185891F831707005D93A1 /* View+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */; };
-		E361858A1F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */; };
-		E361858B1F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */; };
-		E361858C1F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */; };
-		E361858D1F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */; };
-		E361858E1F831707005D93A1 /* View+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */; };
-		E361858F1F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */; };
-		E36185901F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */; };
-		E36185911F831708005D93A1 /* Button+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */; };
-		E36185921F831708005D93A1 /* Color+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */; };
-		E36185931F831708005D93A1 /* View+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */; };
-		E36185941F831708005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */; };
-		E36185951F831708005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */; };
 		E3DF444C1FB007FC009039DA /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DF444B1FB007FC009039DA /* Typealiases.swift */; };
 		E3DF444E1FB00E65009039DA /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DF444D1FB00E65009039DA /* Pipes.swift */; };
 		E3DF44501FB019E8009039DA /* Any+SwiftySweetness.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DF444F1FB019E8009039DA /* Any+SwiftySweetness.swift */; };
@@ -127,11 +107,6 @@
 		E305E2A61F8B11AA00360094 /* DataRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepresentation.swift; sourceTree = "<group>"; };
 		E36185471F8315E3005D93A1 /* Encodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185481F8315E3005D93A1 /* Decodable+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+SwiftySweetness.swift"; sourceTree = "<group>"; };
-		E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SwiftySweetness.swift"; sourceTree = "<group>"; };
-		E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftySweetness.swift"; sourceTree = "<group>"; };
-		E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+SwiftySweetness.swift"; sourceTree = "<group>"; };
-		E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+SwiftySweetness.swift"; sourceTree = "<group>"; };
-		E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185561F831637005D93A1 /* Bool+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185571F831637005D93A1 /* Array+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SwiftySweetness.swift"; sourceTree = "<group>"; };
 		E36185581F831637005D93A1 /* String+SwiftySweetness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SwiftySweetness.swift"; sourceTree = "<group>"; };
@@ -244,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				E3DF444A1FB007E9009039DA /* Global */,
-				E36185441F8315A6005D93A1 /* GUITypes */,
 				E36185451F8315B8005D93A1 /* StandardTypes */,
 				E36185461F8315C5005D93A1 /* Protocols */,
 				E305E2A51F8B113900360094 /* Enums */,
@@ -283,18 +257,6 @@
 				E305E2A61F8B11AA00360094 /* DataRepresentation.swift */,
 			);
 			path = Enums;
-			sourceTree = "<group>";
-		};
-		E36185441F8315A6005D93A1 /* GUITypes */ = {
-			isa = PBXGroup;
-			children = (
-				E36185541F83162C005D93A1 /* Button+SwiftySweetness.swift */,
-				E36185551F83162D005D93A1 /* Color+SwiftySweetness.swift */,
-				E36185511F83162C005D93A1 /* View+SwiftySweetness.swift */,
-				E36185521F83162C005D93A1 /* UIViewController+SwiftySweetness.swift */,
-				E36185531F83162C005D93A1 /* UIWindow+SwiftySweetness.swift */,
-			);
-			path = GUITypes;
 			sourceTree = "<group>";
 		};
 		E36185451F8315B8005D93A1 /* StandardTypes */ = {
@@ -625,17 +587,12 @@
 			files = (
 				E305E2A71F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E36185631F8316FD005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
-				E36185861F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E36185661F8316FD005D93A1 /* Int+SwiftySweetness.swift in Sources */,
 				E36185641F8316FD005D93A1 /* CGRect+SwiftySweetness.swift in Sources */,
 				E36185691F8316FD005D93A1 /* String+SwiftySweetness.swift in Sources */,
-				E36185831F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */,
-				E36185841F831707005D93A1 /* View+SwiftySweetness.swift in Sources */,
-				E36185851F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */,
 				E361854D1F8315F9005D93A1 /* Encodable+SwiftySweetness.swift in Sources */,
 				E36185491F8315F6005D93A1 /* Decodable+SwiftySweetness.swift in Sources */,
 				E36185621F8316FD005D93A1 /* Array+SwiftySweetness.swift in Sources */,
-				E36185821F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */,
 				E36185681F8316FD005D93A1 /* Optional+SwiftySweetness.swift in Sources */,
 				E36185651F8316FD005D93A1 /* Double+SwiftySweetness.swift in Sources */,
 				E36185671F8316FD005D93A1 /* Operators.swift in Sources */,
@@ -661,17 +618,12 @@
 				E305E2A91F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E33859B81FCB69870080710A /* Pipes.swift in Sources */,
 				E36185731F8316FE005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
-				E36185901F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E36185761F8316FE005D93A1 /* Int+SwiftySweetness.swift in Sources */,
 				E36185741F8316FE005D93A1 /* CGRect+SwiftySweetness.swift in Sources */,
 				E36185791F8316FE005D93A1 /* String+SwiftySweetness.swift in Sources */,
-				E361858D1F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */,
-				E361858E1F831707005D93A1 /* View+SwiftySweetness.swift in Sources */,
-				E361858F1F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */,
 				E361854F1F8315FA005D93A1 /* Encodable+SwiftySweetness.swift in Sources */,
 				E361854B1F8315F7005D93A1 /* Decodable+SwiftySweetness.swift in Sources */,
 				E36185721F8316FE005D93A1 /* Array+SwiftySweetness.swift in Sources */,
-				E361858C1F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */,
 				E33859BB1FCB698A0080710A /* Typealiases.swift in Sources */,
 				E36185781F8316FE005D93A1 /* Optional+SwiftySweetness.swift in Sources */,
 				E36185751F8316FE005D93A1 /* Double+SwiftySweetness.swift in Sources */,
@@ -686,17 +638,12 @@
 				E305E2AA1F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E33859B91FCB69880080710A /* Pipes.swift in Sources */,
 				E361857B1F8316FE005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
-				E36185951F831708005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E361857E1F8316FE005D93A1 /* Int+SwiftySweetness.swift in Sources */,
 				E361857C1F8316FE005D93A1 /* CGRect+SwiftySweetness.swift in Sources */,
 				E36185811F8316FE005D93A1 /* String+SwiftySweetness.swift in Sources */,
-				E36185921F831708005D93A1 /* Color+SwiftySweetness.swift in Sources */,
-				E36185931F831708005D93A1 /* View+SwiftySweetness.swift in Sources */,
-				E36185941F831708005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */,
 				E36185501F8315FA005D93A1 /* Encodable+SwiftySweetness.swift in Sources */,
 				E361854C1F8315F7005D93A1 /* Decodable+SwiftySweetness.swift in Sources */,
 				E361857A1F8316FE005D93A1 /* Array+SwiftySweetness.swift in Sources */,
-				E36185911F831708005D93A1 /* Button+SwiftySweetness.swift in Sources */,
 				E33859BC1FCB698A0080710A /* Typealiases.swift in Sources */,
 				E36185801F8316FE005D93A1 /* Optional+SwiftySweetness.swift in Sources */,
 				E361857D1F8316FE005D93A1 /* Double+SwiftySweetness.swift in Sources */,
@@ -711,17 +658,12 @@
 				E305E2A81F8B11AA00360094 /* DataRepresentation.swift in Sources */,
 				E33859B71FCB69870080710A /* Pipes.swift in Sources */,
 				E361856B1F8316FD005D93A1 /* Bool+SwiftySweetness.swift in Sources */,
-				E361858B1F831707005D93A1 /* UIWindow+SwiftySweetness.swift in Sources */,
 				E361856E1F8316FD005D93A1 /* Int+SwiftySweetness.swift in Sources */,
 				E361856C1F8316FD005D93A1 /* CGRect+SwiftySweetness.swift in Sources */,
 				E36185711F8316FD005D93A1 /* String+SwiftySweetness.swift in Sources */,
-				E36185881F831707005D93A1 /* Color+SwiftySweetness.swift in Sources */,
-				E36185891F831707005D93A1 /* View+SwiftySweetness.swift in Sources */,
-				E361858A1F831707005D93A1 /* UIViewController+SwiftySweetness.swift in Sources */,
 				E361854E1F8315FA005D93A1 /* Encodable+SwiftySweetness.swift in Sources */,
 				E361854A1F8315F6005D93A1 /* Decodable+SwiftySweetness.swift in Sources */,
 				E361856A1F8316FD005D93A1 /* Array+SwiftySweetness.swift in Sources */,
-				E36185871F831707005D93A1 /* Button+SwiftySweetness.swift in Sources */,
 				E33859BA1FCB698A0080710A /* Typealiases.swift in Sources */,
 				E36185701F8316FD005D93A1 /* Optional+SwiftySweetness.swift in Sources */,
 				E361856D1F8316FD005D93A1 /* Double+SwiftySweetness.swift in Sources */,

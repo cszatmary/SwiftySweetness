@@ -21,6 +21,5 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftySweetness",
-    exclude: ["Sources/GUITypes"]
+    name: "SwiftySweetness"
 )
