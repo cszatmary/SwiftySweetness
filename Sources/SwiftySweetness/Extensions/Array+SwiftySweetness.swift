@@ -38,6 +38,7 @@ public extension Array {
          - rhs: The index of the element to remove.
      - returns: The element that was removed from the array.
      */
+    @discardableResult
     static func -= (lhs: inout Array, rhs: Int) -> Element {
         return lhs.remove(at: rhs)
     }
@@ -49,6 +50,7 @@ public extension Array {
          - index: The index at which to replace the element.
      - returns: The element previously at the given index.
      */
+    @discardableResult
     mutating func replace(newElement: Element, at index: Index) -> Element {
         let removed = self[index]
         self[index] = newElement
