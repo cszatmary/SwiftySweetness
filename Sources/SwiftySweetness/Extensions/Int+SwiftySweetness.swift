@@ -80,12 +80,13 @@ public extension Int {
     /// - returns: The digit at the specified index.
     func digit(at index: Int) -> Int? {
         var num = self
+        let count = numberOfDigits
         
-        guard index >= 0 && index < num.numberOfDigits else {
+        guard index >= 0 && index < count else {
             return nil
         }
-        
-        num /= 10 ** index
+
+        num /= 10 ** (count - (index + 1))
         let digit = num % 10
         return digit
     }
