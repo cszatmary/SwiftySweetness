@@ -1,7 +1,13 @@
-import XCTest
+import Quick
 
-import SwiftySweetnessTests
+@testable import SwiftySweetnessTests
 
-var tests = [XCTestCaseEntry]()
-tests += SwiftySweetnessTests.allTests()
-XCTMain(tests)
+QCKMain([
+    AnyTests.self,
+    ArrayTests.self,
+    BoolTests.self,
+    DoubleTests.self,
+    IntTests.self,
+    OptionalTests.self,
+    StringTests.self,
+])
