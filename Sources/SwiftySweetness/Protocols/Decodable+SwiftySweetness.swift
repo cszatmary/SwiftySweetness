@@ -31,8 +31,10 @@ public extension Decodable {
         switch type {
         case .json:
             return try JSONDecoder().decode(Self.self, from: data)
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
         case .plist:
             return try PropertyListDecoder().decode(Self.self, from: data)
+        #endif
         }
     }
 }

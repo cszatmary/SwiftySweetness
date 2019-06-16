@@ -30,8 +30,10 @@ public extension Encodable {
         switch type {
         case .json:
             return try JSONEncoder().encode(self)
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
         case .plist:
             return try PropertyListEncoder().encode(self)
+        #endif
         }
     }
 }
