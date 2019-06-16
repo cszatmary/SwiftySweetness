@@ -22,9 +22,11 @@ final class EncodableTests: QuickSpec {
 
                 it("encodes the struct into json") {
                     let json = try! person.encode(to: .json)
-                    let expected = Data("{\"name\":\"John\",\"age\":30}".utf8)
+                    let data = Data("{\"name\":\"John\",\"age\":30}".utf8)
+                    let original = try! JSONDecoder().decode(Person.self, from: json)
+                    let expected = try! JSONDecoder().decode(Person.self, from: data)
 
-                    expect(json).to(equal(expected))
+                    expect(original).to(equal(expected))
                 }
 
 //                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
