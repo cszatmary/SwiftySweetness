@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -18,17 +18,20 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
+#if os(Linux)
+#else
 import CoreGraphics
 
 public extension CGRect {
-    
+
     /// Creates a square with origin and side length specified as CGFloat values.
-    public init(origin: CGPoint, side: CGFloat) {
+    init(origin: CGPoint, side: CGFloat) {
         self.init(origin: origin, size: CGSize(width: side, height: side))
     }
-    
+
     /// Creates a square with coordinates and side length specified as CGFloat values.
-    public init(x: CGFloat, y: CGFloat, side: CGFloat) {
+    init(x: CGFloat, y: CGFloat, side: CGFloat) {
         self.init(x: x, y: y, width: side, height: side)
     }
 }
+#endif

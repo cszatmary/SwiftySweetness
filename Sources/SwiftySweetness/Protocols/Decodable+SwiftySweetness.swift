@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ public extension Decodable {
     /// - parameter type: The format in which the data is represented.
     /// - throws: An error if the data cannot be decoded.
     /// - returns: A value of the specified type decoded from the data.
-    public static func decode(from data: Data, ofType type: DataRepresentation) throws -> Self {
+    static func decode(from data: Data, ofType type: DataRepresentation) throws -> Self {
         switch type {
         case .json:
             return try JSONDecoder().decode(Self.self, from: data)

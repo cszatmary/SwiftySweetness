@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,7 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
+
 import Foundation
 
 /// Types conforming to this protocol are able to generate an array containing all their property names and values.
@@ -33,19 +34,19 @@ public protocol PropertyRepresentable {
 }
 
 public extension PropertyRepresentable {
-    public func propertiesArray() -> [Property] {
+    func propertiesArray() -> [Property] {
         return Mirror(reflecting: self).children.map { (label: $0.label ?? "N/A", value: $0.value) }
     }
     
-    public func propertyLabels() -> [String] {
+    func propertyLabels() -> [String] {
         return propertiesArray().map { $0.label }
     }
     
-    public func propertyValues() -> [Any] {
+    func propertyValues() -> [Any] {
         return propertiesArray().map { $0.value }
     }
     
-    public func propertiesDictionary() -> [String: Any] {
+    func propertiesDictionary() -> [String: Any] {
         var dictionary = [String: Any]()
         Mirror(reflecting: self).children.forEach { dictionary[$0.label ?? "N/A \($0.value)"] = $0.value }
         return dictionary

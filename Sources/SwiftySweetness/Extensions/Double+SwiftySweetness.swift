@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -25,28 +25,27 @@ public extension Double {
     // - MARK: Properties
     
     /// Returns a Bool indicating whether or not the Double is negative.
-    public var isNegative: Bool {
+    var isNegative: Bool {
         return self < 0
     }
     
     // - MARK: Methods
     
     /// Raises value of Double on left to power of Double on right.
-    public static func ** (lhs: Double, rhs: Double) -> Double {
+    static func ** (lhs: Double, rhs: Double) -> Double {
         return pow(lhs, rhs)
     }
     
     /// Power assignment statement.
-    public static func **= (lhs: inout Double, rhs: Double) {
+    static func **= (lhs: inout Double, rhs: Double) {
         lhs = lhs ** rhs
     }
     
     /// Rounds the Double to decimal places value.
     /// - parameter places: The number of decimal places to round the Double to.
     /// - returns: The rounded Double.
-    public func roundTo(places: Int) -> Double {
+    func roundTo(places: Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
-    
 }

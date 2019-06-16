@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -25,22 +25,22 @@ public extension Int {
     // - MARK: Properties
     
     /// Returns true if the Int is palindromic.
-    public var isPalindromic: Bool {
+    var isPalindromic: Bool {
         return self == reverseNumber()
     }
     
     /// A Bool indicating whether or not an Int is negative.
-    public var isNegative: Bool {
+    var isNegative: Bool {
         return self < 0
     }
     
     /// The number of digits in the Int.
-    public var numberOfDigits: Int {
+    var numberOfDigits: Int {
         return (Double(self) |> log10 |> floor |> Int.init(_:)) + 1
     }
     
     /// A returns a Bool indicating whether or not the Int is a prime number.
-    public var isPrime: Bool {
+    var isPrime: Bool {
         if self < 0 { return (self * -1).isPrime }
         if self < 2 { return false }
         let squareRoot = Int(sqrt(Double(self)))
@@ -54,18 +54,18 @@ public extension Int {
     // - MARK: Methods
     
     /// Raises value of Int on left to power of Int on right.
-    public static func ** (lhs: Int, rhs: Int) -> Int {
+    static func ** (lhs: Int, rhs: Int) -> Int {
         return Int(pow(Double(lhs), Double(rhs)))
     }
     
     /// Power assignment statement.
-    public static func **= (lhs: inout Int, rhs: Int) {
+    static func **= (lhs: inout Int, rhs: Int) {
         lhs = lhs ** rhs
     }
     
     /// Reverses the order of the digits and returns the new number.
     /// - returns: The number reversed.
-    public func reverseNumber() -> Int {
+    func reverseNumber() -> Int {
         var num = self
         var result = 0
         while num > 0 {
@@ -78,7 +78,7 @@ public extension Int {
     /// Returns the digit at the specified index. Integers are zero indexed with the first digit being the least significant digit and the last digit being the most significant digit.
     /// - parameter index: The index of the digit.
     /// - returns: The digit at the specified index.
-    public func digit(at index: Int) -> Int? {
+    func digit(at index: Int) -> Int? {
         var num = self
         
         guard index >= 0 && index < num.numberOfDigits else {

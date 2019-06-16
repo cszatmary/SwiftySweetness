@@ -1,4 +1,4 @@
-//    Copyright (c) 2017 Christopher Szatmary <cs@christopherszatmary.com>
+//    Copyright (c) 2019 Christopher Szatmary <cs@christopherszatmary.com>
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ public extension Array {
          - lhs: The array to append the element to.
          - rhs: The element to be appended.
      */
-    public static func += (lhs: inout Array, rhs: Element) {
+    static func += (lhs: inout Array, rhs: Element) {
         lhs.append(rhs)
     }
     
@@ -38,7 +38,7 @@ public extension Array {
          - rhs: The index of the element to remove.
      - returns: The element that was removed from the array.
      */
-    public static func -= (lhs: inout Array, rhs: Int) -> Element {
+    static func -= (lhs: inout Array, rhs: Int) -> Element {
         return lhs.remove(at: rhs)
     }
     
@@ -49,7 +49,7 @@ public extension Array {
          - index: The index at which to replace the element.
      - returns: The element previously at the given index.
      */
-    public mutating func replace(newElement: Element, at index: Index) -> Element {
+    mutating func replace(newElement: Element, at index: Index) -> Element {
         let removed = self[index]
         self[index] = newElement
         return removed
@@ -64,7 +64,7 @@ public extension Array where Element: Comparable {
          - searchItem: The element to be found in the array.
      - returns: The index of the element if it was found, nil otherwise.
      */
-    public func binarySearch(for searchItem: Element) -> Int? {
+    func binarySearch(for searchItem: Element) -> Int? {
         var lowerIndex = 0
         var upperIndex = count - 1
         
