@@ -1,0 +1,32 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: swift:5.0
+  working_directory: ~/SwiftSweetness
+
+jobs:
+  build-dev:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Build package in debug mode.
+          command: swift build
+      - run:
+          name: Run tests.
+          command: swift test
+  build-release:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Build package in release mode.
+          command: swift build -c release
+
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - build-dev
+      - build-release
