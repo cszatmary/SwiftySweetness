@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftySweetness'
-  s.version          = '2.0.0'
+  s.version          = '3.0.0'
   s.summary          = 'Basic extensions to make Swift a little sweeter.'
   s.description      = <<-DESC
       SwiftySweetness adds extensions to Swift to improve functionality and make tasks simpler.
@@ -15,6 +15,4 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.source_files = 'Sources/**/*.{swift}'
   s.frameworks = 'Foundation'
-  s.ios.framework = 'UIKit'
-  s.osx.framework = 'AppKit'
 end
