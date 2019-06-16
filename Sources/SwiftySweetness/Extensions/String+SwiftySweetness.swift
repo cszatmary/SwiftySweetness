@@ -57,19 +57,37 @@ public extension String {
     func char(at index: Int) -> Character {
         return self[index]
     }
-    
+
     /**
-     Adds a padding of a given length to a string.
+     Applies padding to the start of the string until it reaches the specified length.
      - parameters:
-         - character: The character to add.
-         - length: The length of the padding.
-     - returns: The string with the applied padding.
+         - string: The string to pad with.
+         - length: The desired length of the string.
+     - returns: The string with the applied padding at the start.
     */
-    func pad(with character: Character, toLength length: Int) -> String {
+    func padStart(with string: String = " ", toLength length: Int) -> String {
         let padCount = length - count
         guard padCount > 0 else { return self }
-        
-        return String(repeating: character, count: padCount) + self
+
+        let padString = string + String(repeating: string, count: padCount / string.count)
+
+        return padString[0..<padCount] + self
+    }
+
+    /**
+     Applies padding to the end of the string until it reaches the specified length.
+     - parameters:
+         - string: The string to pad with.
+         - length: The desired length of the string.
+     - returns: The string with the applied padding at the end.
+     */
+    func padEnd(with string: String = " ", toLength length: Int) -> String {
+        let padCount = length - count
+        guard padCount > 0 else { return self }
+
+        let padString = string + String(repeating: string, count: padCount / string.count)
+
+        return self + padString[0..<padCount]
     }
     
     /// Splits a camel cased string. For example, the string "thisIsCamelCased" would return "this Is Camel Cased".
