@@ -1,6 +1,7 @@
 import XCTest
-@testable import SwiftySweetnessTests
 
-XCTMain([
-    testCase(SwiftySweetnessTests.allTests),
-])
+import SwiftySweetnessTests
+
+var tests = [XCTestCaseEntry]()
+tests += SwiftySweetnessTests.allTests()
+XCTMain(tests)
