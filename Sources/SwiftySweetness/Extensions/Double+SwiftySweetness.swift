@@ -21,26 +21,25 @@
 import Foundation
 
 public extension Double {
-    
     // - MARK: Properties
-    
+
     /// Returns a Bool indicating whether or not the Double is negative.
     var isNegative: Bool {
         return self < 0
     }
-    
+
     // - MARK: Methods
-    
+
     /// Raises value of Double on left to power of Double on right.
     static func ** (lhs: Double, rhs: Double) -> Double {
         return pow(lhs, rhs)
     }
-    
+
     /// Power assignment statement.
     static func **= (lhs: inout Double, rhs: Double) {
         lhs = lhs ** rhs
     }
-    
+
     /// Rounds the Double to decimal places value.
     /// - parameter places: The number of decimal places to round the Double to.
     /// - returns: The rounded Double.

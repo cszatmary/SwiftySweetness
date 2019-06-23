@@ -5,8 +5,8 @@
 //  Created by Christopher Szatmary on 2019-06-16.
 //
 
-import Quick
 import Nimble
+import Quick
 @testable import SwiftySweetness
 
 extension Person: PropertyRepresentable {}
@@ -27,9 +27,9 @@ final class PropertyRepresentableTests: QuickSpec {
                     let properties = person.propertiesArray()
 
                     expect(properties[0].label).to(equal("name"))
-                    expect((properties[0].value as! String)).to(equal(name))
+                    expect(properties[0].value as! String).to(equal(name))
                     expect(properties[1].label).to(equal("age"))
-                    expect((properties[1].value as! Int)).to(equal(age))
+                    expect(properties[1].value as! Int).to(equal(age))
                 }
             }
 
@@ -57,11 +57,10 @@ final class PropertyRepresentableTests: QuickSpec {
                 it("returns a dictionary containing the properties") {
                     let dictionary = person.propertiesDictionary()
 
-                    expect((dictionary["name"] as! String)).to(equal(name))
-                    expect((dictionary["age"] as! Int)).to(equal(age))
+                    expect(dictionary["name"] as! String).to(equal(name))
+                    expect(dictionary["age"] as! Int).to(equal(age))
                 }
             }
         }
     }
 }
-

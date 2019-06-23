@@ -20,8 +20,9 @@
 
 import Foundation
 
+// swiftlint:disable switch_case_alignment
+
 public extension Encodable {
-    
     /// Encodes the instance in the given format.
     /// - parameter type: The format in which the data should be encoded.
     /// - throws: An error if the type cannot be encoded in the given format.
@@ -31,8 +32,8 @@ public extension Encodable {
         case .json:
             return try JSONEncoder().encode(self)
         #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-        case .plist:
-            return try PropertyListEncoder().encode(self)
+            case .plist:
+                return try PropertyListEncoder().encode(self)
         #endif
         }
     }

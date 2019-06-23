@@ -25,7 +25,7 @@ public enum DataRepresentation {
     /// Represents JSON format.
     case json
     #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-    /// Represents Property List format
-    case plist
+        /// Represents Property List format
+        case plist
     #endif
 }

@@ -24,10 +24,9 @@ import Foundation
 /// - parameter any: The optional value of type Any to unwrap.
 /// - returns: The unwrapped value or nil if the value is nil.
 public func unwrap(any: Any) -> Any? {
-    
     let mirror = Mirror(reflecting: any)
     guard mirror.displayStyle == .optional else { return any }
-    
+
     if mirror.children.count == 0 { return nil }
     return mirror.children.first!.value
 }

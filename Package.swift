@@ -8,7 +8,8 @@ let package = Package(
     products: [
         .library(
             name: "SwiftySweetness",
-            targets: ["SwiftySweetness"]),
+            targets: ["SwiftySweetness"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Quick.git", from: "2.1.0"),
@@ -17,10 +18,12 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftySweetness",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "SwiftySweetnessTests",
-            dependencies: ["SwiftySweetness", "Quick", "Nimble"]),
+            dependencies: ["SwiftySweetness", "Quick", "Nimble"]
+        ),
     ],
     swiftLanguageVersions: [.v5]
 )

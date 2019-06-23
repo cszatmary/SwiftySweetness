@@ -30,7 +30,7 @@ public extension Array {
     static func += (lhs: inout Array, rhs: Element) {
         lhs.append(rhs)
     }
-    
+
     /**
      Removes an element from the given array at the specified index.
      - parameters:
@@ -42,7 +42,7 @@ public extension Array {
     static func -= (lhs: inout Array, rhs: Int) -> Element {
         return lhs.remove(at: rhs)
     }
-    
+
     /**
      Replaces the element at a given index and returns the previous element.
      - parameters:
@@ -59,9 +59,9 @@ public extension Array {
 }
 
 public extension Array where Element: Comparable {
-    
     /**
-     Searches for and returns an element, if found, using binary search. NOTE: Array must be sorted for this method to work properly!
+     Searches for and returns an element, if found, using binary search.
+     NOTE: Array must be sorted for this method to work properly!
      - parameters:
          - searchItem: The element to be found in the array.
      - returns: The index of the element if it was found, nil otherwise.
@@ -69,9 +69,9 @@ public extension Array where Element: Comparable {
     func binarySearch(for searchItem: Element) -> Int? {
         var lowerIndex = 0
         var upperIndex = count - 1
-        
+
         while true {
-            let currentIndex = (lowerIndex + upperIndex)/2
+            let currentIndex = (lowerIndex + upperIndex) / 2
             if self[currentIndex] == searchItem {
                 return currentIndex
             } else if lowerIndex > upperIndex {

@@ -21,9 +21,8 @@
 import Foundation
 
 public extension Optional {
-    
     // - MARK: Properties
-    
+
     /// Returns a boolean value stating whether or not the given optional has a value other than nil.
     var hasValue: Bool {
         return self != nil

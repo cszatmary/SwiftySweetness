@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import Quick
 import Nimble
+import Quick
 @testable import SwiftySweetness
 
 final class DecodableTests: QuickSpec {
@@ -22,12 +22,12 @@ final class DecodableTests: QuickSpec {
                 }
 
                 #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-                it("decodes the plist into a struct") {
-                    let data = loadFile(type: .plist)
-                    let person = try! Person.decode(from: data, ofType: .plist)
+                    it("decodes the plist into a struct") {
+                        let data = loadFile(type: .plist)
+                        let person = try! Person.decode(from: data, ofType: .plist)
 
-                    expect(person).to(equal(Person(name: "John", age: 30)))
-                }
+                        expect(person).to(equal(Person(name: "John", age: 30)))
+                    }
                 #endif
             }
         }

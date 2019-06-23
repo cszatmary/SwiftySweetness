@@ -21,36 +21,35 @@
 import Foundation
 
 public extension String {
-    
     // - MARK: Properties
-    
+
     /// Returns a trimmed version of the text without leading or trailing whitespace and newlines.
     var trimmed: String {
-        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
+
     // - MARK: Methods
-    
+
     /// Returns the character at the given index of a string.
-    subscript (i: Int) -> Character {
+    subscript(i: Int) -> Character {
         return self[index(startIndex, offsetBy: i)]
     }
-    
+
     /// Returns a substring within the given Range of a string.
-    subscript (r: Range<Int>) -> String {
+    subscript(r: Range<Int>) -> String {
         let start = index(startIndex, offsetBy: r.lowerBound)
         let end = index(startIndex, offsetBy: r.upperBound)
         return String(self[start..<end])
 //        return String(self[Range(start ..< end)])
     }
-    
+
     /// Returns a substring within the given ClosedRange of a string.
-    subscript (r: ClosedRange<Int>) -> String {
+    subscript(r: ClosedRange<Int>) -> String {
         let start = index(startIndex, offsetBy: r.lowerBound)
         let end = index(startIndex, offsetBy: r.upperBound + 1)
         return String(self[start..<end])
     }
-    
+
     /// Returns the character present at the given index in a string.
     /// - parameter index: The index of the character.
     /// - returns: The character at the given index.
@@ -64,7 +63,7 @@ public extension String {
          - string: The string to pad with.
          - length: The desired length of the string.
      - returns: The string with the applied padding at the start.
-    */
+     */
     func padStart(with string: String = " ", toLength length: Int) -> String {
         let padCount = length - count
         guard padCount > 0 else { return self }
@@ -89,15 +88,18 @@ public extension String {
 
         return self + padString[0..<padCount]
     }
-    
+
     /// Splits a camel cased string. For example, the string "thisIsCamelCased" would return "this Is Camel Cased".
     func splitCamelCase() -> String {
-        return unicodeScalars.compactMap({ CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }).joined()
+        return unicodeScalars.compactMap { CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }.joined()
     }
-    
+
     /// Returns the first letter of each word in the string. For example, the string "Hello World" would return "HW".
     func initials() -> String {
-        guard !self.isEmpty else { return "" }
-        return components(separatedBy: " ").map({ String($0.first!) }).filter({ CharacterSet.letters.contains($0.unicodeScalars.first!) }).joined(separator: "")
+        guard !isEmpty else { return "" }
+        return components(separatedBy: " ")
+            .map { String($0.first!) }
+            .filter { CharacterSet.letters.contains($0.unicodeScalars.first!) }
+            .joined(separator: "")
     }
 }

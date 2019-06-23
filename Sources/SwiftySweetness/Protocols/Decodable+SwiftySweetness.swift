@@ -20,8 +20,9 @@
 
 import Foundation
 
+// swiftlint:disable switch_case_alignment
+
 public extension Decodable {
-    
     /// Decodes Data and returns it as a specified type.
     /// - parameter data: The Data to be decoded.
     /// - parameter type: The format in which the data is represented.
@@ -32,8 +33,8 @@ public extension Decodable {
         case .json:
             return try JSONDecoder().decode(Self.self, from: data)
         #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-        case .plist:
-            return try PropertyListDecoder().decode(Self.self, from: data)
+            case .plist:
+                return try PropertyListDecoder().decode(Self.self, from: data)
         #endif
         }
     }

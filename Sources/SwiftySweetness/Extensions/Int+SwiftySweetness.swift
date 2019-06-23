@@ -21,24 +21,23 @@
 import Foundation
 
 public extension Int {
-    
     // - MARK: Properties
-    
+
     /// Returns true if the Int is palindromic.
     var isPalindromic: Bool {
         return self == reverseNumber()
     }
-    
+
     /// A Bool indicating whether or not an Int is negative.
     var isNegative: Bool {
         return self < 0
     }
-    
+
     /// The number of digits in the Int.
     var numberOfDigits: Int {
         return (Double(self) |> log10 |> floor |> Int.init(_:)) + 1
     }
-    
+
     /// A returns a Bool indicating whether or not the Int is a prime number.
     var isPrime: Bool {
         if self < 0 { return (self * -1).isPrime }
@@ -50,19 +49,19 @@ public extension Int {
         }
         return true
     }
-    
+
     // - MARK: Methods
-    
+
     /// Raises value of Int on left to power of Int on right.
     static func ** (lhs: Int, rhs: Int) -> Int {
         return Int(pow(Double(lhs), Double(rhs)))
     }
-    
+
     /// Power assignment statement.
     static func **= (lhs: inout Int, rhs: Int) {
         lhs = lhs ** rhs
     }
-    
+
     /// Reverses the order of the digits and returns the new number.
     /// - returns: The number reversed.
     func reverseNumber() -> Int {
@@ -74,14 +73,16 @@ public extension Int {
         }
         return result
     }
-    
-    /// Returns the digit at the specified index. Integers are zero indexed with the first digit being the least significant digit and the last digit being the most significant digit.
+
+    /// Returns the digit at the specified index.
+    /// Integers are zero indexed with the first digit being the least significant digit
+    /// and the last digit being the most significant digit.
     /// - parameter index: The index of the digit.
     /// - returns: The digit at the specified index.
     func digit(at index: Int) -> Int? {
         var num = self
         let count = numberOfDigits
-        
+
         guard index >= 0 && index < count else {
             return nil
         }
@@ -90,5 +91,4 @@ public extension Int {
         let digit = num % 10
         return digit
     }
-    
 }

@@ -23,50 +23,58 @@ import Foundation
 // MARK: - Pipes
 
 /// Passes the value to the left of the operator as the parameter of the unary function to the right of the operator.
-public func |> <A,X>(lhs: A, rhs: UnaryFunction<A, X>) -> X {
+public func |> <A, X>(lhs: A, rhs: UnaryFunction<A, X>) -> X {
     return rhs(lhs)
 }
 
-/// Passes the value to the left of the operator as the first parameter of the binary function to the right of the operator.
-public func |> <A,B,X>(lhs: A, rhs: (BinaryFunction<A, B, X>, B)) -> X {
+/// Passes the value to the left of the operator as the first parameter
+/// of the binary function to the right of the operator.
+public func |> <A, B, X>(lhs: A, rhs: (BinaryFunction<A, B, X>, B)) -> X {
     return rhs.0(lhs, rhs.1)
 }
 
-/// Passes the value to the left of the operator as the first parameter of the ternary function to the right of the operator.
-public func |> <A,B,C,X>(lhs: A, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X {
+/// Passes the value to the left of the operator as the first parameter
+/// of the ternary function to the right of the operator.
+public func |> <A, B, C, X>(lhs: A, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X {
     return rhs.0(lhs, rhs.1, rhs.2)
 }
 
 // MARK: - Optional Pipes
 
-/// Passes the optional value to the left of the operator as the parameter of the unary function to the right of the operator.
-public func |>? <A,X>(lhs: A?, rhs: UnaryFunction<A, X>) -> X? {
+/// Passes the optional value to the left of the operator as the parameter
+/// of the unary function to the right of the operator.
+public func |>? <A, X>(lhs: A?, rhs: UnaryFunction<A, X>) -> X? {
     return lhs.map(rhs)
 }
 
-/// Passes the optional value to the left of the operator as the first parameter of the binary function to the right of the operator.
-public func |>? <A,B,X>(lhs: A?, rhs: (BinaryFunction<A, B, X>, B)) -> X? {
+/// Passes the optional value to the left of the operator as the first parameter
+/// of the binary function to the right of the operator.
+public func |>? <A, B, X>(lhs: A?, rhs: (BinaryFunction<A, B, X>, B)) -> X? {
     return lhs.map { rhs.0($0, rhs.1) }
 }
 
-/// Passes the optional value to the left of the operator as the first parameter of the ternary function to the right of the operator.
-public func |>? <A,B,C,X>(lhs: A?, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X? {
+/// Passes the optional value to the left of the operator as the first parameter
+/// of the ternary function to the right of the operator.
+public func |>? <A, B, C, X>(lhs: A?, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X? {
     return lhs.map { rhs.0($0, rhs.1, rhs.2) }
 }
 
 // MARK: - Force-unwrap Pipes
 
-/// Force-unwraps the optional value to the left of the operator and passes it as the parameter of the unary function to the right of the operator.
-public func |>! <A,X>(lhs: A?, rhs: UnaryFunction<A, X>) -> X {
+/// Force-unwraps the optional value to the left of the operator and passes it
+/// as the parameterof the unary function to the right of the operator.
+public func |>! <A, X>(lhs: A?, rhs: UnaryFunction<A, X>) -> X {
     return rhs(lhs!)
 }
 
-/// Force-unwraps the optional value to the left of the operator and passes it as the first parameter of the binary function to the right of the operator.
-public func |>! <A,B,X>(lhs: A?, rhs: (BinaryFunction<A, B, X>, B)) -> X {
+/// Force-unwraps the optional value to the left of the operator and passes it
+/// as the first parameter of the binary function to the right of the operator.
+public func |>! <A, B, X>(lhs: A?, rhs: (BinaryFunction<A, B, X>, B)) -> X {
     return rhs.0(lhs!, rhs.1)
 }
 
-/// Force-unwraps the optional value to the left of the operator and passes it as the first parameter of the ternary function to the right of the operator.
-public func |>! <A,B,C,X>(lhs: A?, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X {
+/// Force-unwraps the optional value to the left of the operator and passes it
+/// as the first parameter of the ternary function to the right of the operator.
+public func |>! <A, B, C, X>(lhs: A?, rhs: (TernaryFunction<A, B, C, X>, B, C)) -> X {
     return rhs.0(lhs!, rhs.1, rhs.2)
 }

@@ -18,7 +18,6 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-
 import Foundation
 
 /**
@@ -60,7 +59,8 @@ public final class If<T> {
     }
 
     /**
-     Adds an `else` branch to the `If` instance. This will also evaluate the conditions and return the appropriate result.
+     Adds an `else` branch to the `If` instance.
+     This will also evaluate the conditions and return the appropriate result.
      - parameter action: The action to perform if the else is reached.
      - returns: The result of the if statement.
      */

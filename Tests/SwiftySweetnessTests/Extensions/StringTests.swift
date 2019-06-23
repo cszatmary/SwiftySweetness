@@ -5,8 +5,8 @@
 //  Created by Christopher Szatmary on 2019-06-15.
 //
 
-import Quick
 import Nimble
+import Quick
 @testable import SwiftySweetness
 
 final class StringTests: QuickSpec {

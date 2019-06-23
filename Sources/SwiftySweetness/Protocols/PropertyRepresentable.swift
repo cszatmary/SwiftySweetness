@@ -18,7 +18,6 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-
 import Foundation
 
 /// Types conforming to this protocol are able to generate an array containing all their property names and values.
@@ -37,15 +36,15 @@ public extension PropertyRepresentable {
     func propertiesArray() -> [Property] {
         return Mirror(reflecting: self).children.map { (label: $0.label ?? "N/A", value: $0.value) }
     }
-    
+
     func propertyLabels() -> [String] {
         return propertiesArray().map { $0.label }
     }
-    
+
     func propertyValues() -> [Any] {
         return propertiesArray().map { $0.value }
     }
-    
+
     func propertiesDictionary() -> [String: Any] {
         var dictionary = [String: Any]()
         Mirror(reflecting: self).children.forEach { dictionary[$0.label ?? "N/A \($0.value)"] = $0.value }

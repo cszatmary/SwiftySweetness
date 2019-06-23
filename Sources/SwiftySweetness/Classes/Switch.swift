@@ -55,7 +55,8 @@ public final class Switch<T: Equatable, S> {
     }
 
     /**
-     Adds an `default` case to the `Switch` instance. This will also evaluate the cases and return the appropriate result.
+     Adds an `default` case to the `Switch` instance.
+     This will also evaluate the cases and return the appropriate result.
      - parameter action: The action to perform if the default is reached.
      - returns: The result of the switch statement.
      */
@@ -73,4 +74,3 @@ struct Case<T, S> {
     let value: T
     let action: () -> S
 }
-

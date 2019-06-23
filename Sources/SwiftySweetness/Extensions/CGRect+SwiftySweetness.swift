@@ -19,18 +19,17 @@
 //    THE SOFTWARE.
 
 #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-import CoreGraphics
+    import CoreGraphics
 
-public extension CGRect {
+    public extension CGRect {
+        /// Creates a square with origin and side length specified as CGFloat values.
+        init(origin: CGPoint, side: CGFloat) {
+            self.init(origin: origin, size: CGSize(width: side, height: side))
+        }
 
-    /// Creates a square with origin and side length specified as CGFloat values.
-    init(origin: CGPoint, side: CGFloat) {
-        self.init(origin: origin, size: CGSize(width: side, height: side))
+        /// Creates a square with coordinates and side length specified as CGFloat values.
+        init(x: CGFloat, y: CGFloat, side: CGFloat) {
+            self.init(x: x, y: y, width: side, height: side)
+        }
     }
-
-    /// Creates a square with coordinates and side length specified as CGFloat values.
-    init(x: CGFloat, y: CGFloat, side: CGFloat) {
-        self.init(x: x, y: y, width: side, height: side)
-    }
-}
 #endif

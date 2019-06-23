@@ -21,7 +21,6 @@
 import Foundation
 
 public extension Bool {
-    
     /// Returns the value of the Bool as an Int. true = 1, false = 0
     var intValue: Int {
         return self == true ? 1 : 0
