@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: swift:5.0
+    - image: cszatma/swift:5.0
   working_directory: ~/SwiftSweetness
 
 jobs:
@@ -13,9 +13,6 @@ jobs:
       - run:
           name: Build package in debug mode.
           command: swift build
-      - run:
-          name: Run tests.
-          command: swift test
   build-release:
     <<: *defaults
     steps:
@@ -23,6 +20,24 @@ jobs:
       - run:
           name: Build package in release mode.
           command: swift build -c release
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install tools with mint
+          command: mint bootstrap
+      - run:
+          name: Run swiftlint
+          command: mint run swiftlint
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Run tests.
+          command: swift test
+
 
 workflows:
   version: 2
@@ -30,3 +45,7 @@ workflows:
     jobs:
       - build-dev
       - build-release
+      - lint
+      - test:
+          requires:
+            - build-dev
