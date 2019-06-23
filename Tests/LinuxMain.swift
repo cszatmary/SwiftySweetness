@@ -2,6 +2,7 @@ import Quick
 
 @testable import SwiftySweetnessTests
 
+// swiftlint:disable trailing_comma
 QCKMain([
     // Extensions
     AnyTests.self,

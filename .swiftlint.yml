@@ -1,0 +1,8 @@
+disabled_rules:
+  - identifier_name
+  - large_tuple
+included:
+  - Sources
+  - Tests
+excluded:
+  - .build
