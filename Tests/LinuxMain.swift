@@ -3,6 +3,9 @@ import Quick
 @testable import SwiftySweetnessTests
 
 QCKMain([
+    // Classes
+    IfTests.self,
+    SwitchTests.self,
     // Extensions
     AnyTests.self,
     ArrayTests.self,
