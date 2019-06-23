@@ -13,6 +13,10 @@ jobs:
       - run:
           name: Build package in debug mode.
           command: swift build
+      - save_cache:
+          key: swiftysweetness-build-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .build/
   build-release:
     <<: *defaults
     steps:
@@ -34,6 +38,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - swiftysweetness-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Run tests.
           command: swift test
