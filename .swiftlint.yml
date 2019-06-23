@@ -1,6 +1,7 @@
 disabled_rules:
   - identifier_name
   - large_tuple
+  - trailing_comma
 included:
   - Sources
   - Tests
