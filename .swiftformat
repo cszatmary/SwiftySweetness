@@ -1,0 +1,7 @@
+--exclude .build
+
+--disable andOperator
+--disable ranges
+
+--wraparguments before-first
+--wrapcollections before-first
