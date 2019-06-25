@@ -14,6 +14,8 @@ QCKMain([
     IntTests.self,
     OptionalTests.self,
     StringTests.self,
+    // Global
+    PipesTests.self,
     // Protocols
     DecodableTests.self,
     EncodableTests.self,
