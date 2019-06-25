@@ -1,0 +1,10 @@
+disabled_rules:
+  - identifier_name
+  - type_name
+  - large_tuple
+  - trailing_comma
+included:
+  - Sources
+  - Tests
+excluded:
+  - .build

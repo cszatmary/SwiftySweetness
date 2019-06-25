@@ -1,0 +1,77 @@
+version: 2
+
+aliases:
+  - &restore_build_cache
+    keys:
+      - swiftysweetness-build-{{ .Branch }}-{{ .Revision }}
+  - &restore_mint_cache
+    keys:
+      - swiftysweetness-mint-{{ checksum "Mintfile" }}
+
+defaults: &defaults
+  docker:
+    - image: cszatma/swift:5.0
+  working_directory: ~/SwiftSweetness
+
+jobs:
+  build-dev:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Build package in debug mode.
+          command: swift build
+      - save_cache:
+          key: swiftysweetness-build-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .build/
+  build-release:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Build package in release mode.
+          command: swift build -c release
+  install-tools:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore_mint_cache
+      - run:
+          name: Install tools with mint
+          command: mint bootstrap
+      - save_cache:
+          key: swiftysweetness-mint-{{ checksum "Mintfile" }}
+          paths:
+            - /usr/local/lib/mint
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore_mint_cache
+      - run:
+          name: Run swiftlint
+          command: mint run swiftlint
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore_build_cache
+      - run:
+          name: Run tests.
+          command: swift test
+
+
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - build-dev
+      - build-release
+      - install-tools
+      - lint:
+          requires:
+            - install-tools
+      - test:
+          requires:
+            - build-dev
