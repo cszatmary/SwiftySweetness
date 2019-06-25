@@ -9,7 +9,7 @@ import Nimble
 import Quick
 @testable import SwiftySweetness
 
-final class PipeTests: QuickSpec {
+final class PipesTests: QuickSpec {
     override func spec() {
         describe("Pipes.swift tests") {
             describe("standard pipe tests") {
