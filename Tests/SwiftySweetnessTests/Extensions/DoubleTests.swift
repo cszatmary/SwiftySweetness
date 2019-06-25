@@ -36,10 +36,10 @@ final class DoubleTests: QuickSpec {
                 }
             }
 
-            describe("roundTo() tests") {
+            describe("rounded() tests") {
                 it("rounds the double to 2 decimal places") {
                     let double = 12.3489345
-                    let rounded = double.roundTo(places: 2)
+                    let rounded = double.rounded(to: 2)
 
                     expect(rounded).to(equal(12.35))
                 }

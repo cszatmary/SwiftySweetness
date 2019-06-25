@@ -25,7 +25,7 @@ public extension Int {
 
     /// Returns true if the Int is palindromic.
     var isPalindromic: Bool {
-        return self == reverseNumber()
+        return self == reversed()
     }
 
     /// A Bool indicating whether or not an Int is negative.
@@ -64,7 +64,7 @@ public extension Int {
 
     /// Reverses the order of the digits and returns the new number.
     /// - returns: The number reversed.
-    func reverseNumber() -> Int {
+    func reversed() -> Int {
         var num = self
         var result = 0
         while num > 0 {

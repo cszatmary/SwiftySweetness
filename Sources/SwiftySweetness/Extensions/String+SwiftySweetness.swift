@@ -64,7 +64,7 @@ public extension String {
          - length: The desired length of the string.
      - returns: The string with the applied padding at the start.
      */
-    func padStart(with string: String = " ", toLength length: Int) -> String {
+    func paddingStart(with string: String = " ", toLength length: Int) -> String {
         let padCount = length - count
         guard padCount > 0 else { return self }
 
@@ -80,7 +80,7 @@ public extension String {
          - length: The desired length of the string.
      - returns: The string with the applied padding at the end.
      */
-    func padEnd(with string: String = " ", toLength length: Int) -> String {
+    func paddingEnd(with string: String = " ", toLength length: Int) -> String {
         let padCount = length - count
         guard padCount > 0 else { return self }
 
@@ -90,7 +90,7 @@ public extension String {
     }
 
     /// Splits a camel cased string. For example, the string "thisIsCamelCased" would return "this Is Camel Cased".
-    func splitCamelCase() -> String {
+    func splittingCamelCase() -> String {
         return unicodeScalars.compactMap { CharacterSet.uppercaseLetters.contains($0) ? " \($0)" : String($0) }.joined()
     }
 

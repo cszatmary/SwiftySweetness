@@ -43,7 +43,7 @@ public extension Double {
     /// Rounds the Double to decimal places value.
     /// - parameter places: The number of decimal places to round the Double to.
     /// - returns: The rounded Double.
-    func roundTo(places: Int) -> Double {
+    func rounded(to places: Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }

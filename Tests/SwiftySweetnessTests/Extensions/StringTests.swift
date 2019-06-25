@@ -64,34 +64,34 @@ final class StringTests: QuickSpec {
                 }
 
                 it("pads the start of the string") {
-                    let padded = string.padStart(with: "$ABC", toLength: 10)
+                    let padded = string.paddingStart(with: "$ABC", toLength: 10)
 
                     expect(padded).to(equal("$ABC$hello"))
                 }
 
                 it("pads the start of the string with whitespace") {
-                    let padded = string.padStart(toLength: 10)
+                    let padded = string.paddingStart(toLength: 10)
 
                     expect(padded).to(equal("     hello"))
                 }
 
                 it("pads the end of the string") {
-                    let padded = string.padEnd(with: "$ABC", toLength: 10)
+                    let padded = string.paddingEnd(with: "$ABC", toLength: 10)
 
                     expect(padded).to(equal("hello$ABC$"))
                 }
 
                 it("pads the end of the string with whitespace") {
-                    let padded = string.padEnd(toLength: 10)
+                    let padded = string.paddingEnd(toLength: 10)
 
                     expect(padded).to(equal("hello     "))
                 }
             }
 
-            describe("splitCamelCase() tests") {
+            describe("splittingCamelCase() tests") {
                 it("splits the camel cased string") {
                     let string = "camelCaseWord"
-                    let split = string.splitCamelCase()
+                    let split = string.splittingCamelCase()
 
                     expect(split).to(equal("camel Case Word"))
                 }

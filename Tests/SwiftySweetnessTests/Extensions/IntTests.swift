@@ -56,10 +56,10 @@ final class IntTests: QuickSpec {
                 }
             }
 
-            describe("reverseNumber() tests") {
+            describe("reversed() tests") {
                 it("reverses the number") {
                     let num = 12345
-                    let reversed = num.reverseNumber()
+                    let reversed = num.reversed()
 
                     expect(reversed).to(equal(54321))
                 }
