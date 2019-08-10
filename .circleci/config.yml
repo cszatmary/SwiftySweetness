@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 aliases:
   - &restore_build_cache
@@ -39,7 +39,7 @@ jobs:
       - restore_cache: *restore_mint_cache
       - run:
           name: Install tools with mint
-          command: mint bootstrap
+          command: make mint
       - save_cache:
           key: swiftysweetness-mint-{{ checksum "Mintfile" }}
           paths:
@@ -51,7 +51,7 @@ jobs:
       - restore_cache: *restore_mint_cache
       - run:
           name: Run swiftlint
-          command: mint run swiftlint
+          command: make lint
   test:
     <<: *defaults
     steps:
@@ -63,7 +63,6 @@ jobs:
 
 
 workflows:
-  version: 2
   build-test:
     jobs:
       - build-dev
